@@ -1,0 +1,171 @@
+.anima-text {
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+// some, gradiente, digita
+.anima-text-grid {
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    @include font(25, 800);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    // some
+    .some {
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            animation: some 1.5s cubic-bezier(0.86, 0, 0.15, 1) forwards;
+            background: #6126a5;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    @keyframes some {
+        from {
+            transform: translateX(-101%);
+        }
+
+        to {
+            transform: translateX(101%);
+        }
+    }
+
+    p {
+        max-width: fit-content;
+        opacity: 0;
+        animation: fade 1ms 0.5s forwards;
+    }
+
+    @keyframes fade {
+        to {
+            opacity: 1;
+        }
+    }
+
+    // gradiente
+    .grad-text {
+        color: transparent;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #0b6b23, #23d5ab);
+        background-size: 400% 100%;
+        animation: degrade 3s linear infinite alternate;
+        max-width: fit-content;
+        background-clip: text;
+    }
+
+    @keyframes degrade {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+
+    }
+
+    // completa
+    .completa {
+        // display: flex;
+        // gap: 4px;
+
+        span {
+            position: relative;
+        }
+    }
+
+    .completa span::before {
+        content: '';
+        color: #6126a5;
+        animation: palavras 20s infinite;
+    }
+
+    .completa span::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        border-left: 2px solid #6126a5;
+        right: -4px;
+        opacity: 1;
+        animation: cursor .5s infinite, digita 20s steps(10) infinite;
+        width: calc(100% + 10px);
+        background: #badeeb;
+    }
+
+    @keyframes digita {
+
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95% {
+            width: 0;
+        }
+
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85% {
+            width: calc(100% + 10px);
+        }
+    }
+
+    @keyframes cursor {
+
+        0% {
+            border-left: 2px solid #badeeb;
+        }
+    }
+
+    @keyframes palavras {
+
+        0%,
+        20% {
+            content: "Lorem Ipsum";
+        }
+
+        21%,
+        40% {
+            content: "Dolor Sit";
+        }
+
+        41%,
+        60% {
+            content: "Amet Consectetur";
+        }
+
+        61%,
+        80% {
+            content: "Adipiscing Elit";
+        }
+
+        81%,
+        100% {
+            content: "Elit, Sed Do";
+        }
+
+    }
+}

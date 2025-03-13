@@ -1,0 +1,14 @@
+.header {
+  padding: 50px 10px;
+}
+
+.header-grid {
+  @include flex(30px, space-between);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  align-items: center;
+}

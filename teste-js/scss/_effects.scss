@@ -1,0 +1,110 @@
+.effects {
+    padding: 20px 50px;
+}
+
+.effects-grid {
+    display: grid;
+    gap: 100px;
+    text-align: center;
+    justify-items: center;
+}
+
+.guarda-card {
+    display: grid;
+    gap: 30px;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    align-items: start;
+
+    .card1 {
+        position: relative;
+        padding: 40px 20px 20px;
+        max-width: 300px;
+        width: 100%;
+        height: 100px;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #b7f1f5 0%, #d3f6f9 40%, #d3f6f9 60%, #b7f1f5 100%);
+        text-align: center;
+        display: grid;
+        justify-items: center;
+        cursor: pointer;
+
+        h4 {
+            font-size: 25px;
+        }
+
+        img {
+            position: absolute;
+            top: -30px;
+            width: 60px;
+            background: #05cfdd;
+            border-radius: 50%;
+            padding: 5px;
+
+        }
+
+        // .aparece {
+        //     transition: .3s;
+        //     @include flex(10px);
+
+        //     p {
+        //         transform: translateZ(14.5px);
+        //         transition: .3s;
+        //         opacity: 0;
+        //     }
+        // }
+
+        &:hover {
+            height: fit-content;
+            transition: .3s;
+
+            // p {
+            //     transform: translateY(0px);
+            //     opacity: 1;
+            // }
+
+            img {
+                -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+                transition: 1s;
+
+            }
+        }
+    }
+
+    .card2 {
+        margin-bottom: 60px;
+        height: 250px;
+        width: 350px;
+        background: #e9e9e9;
+        border-radius: 30px;
+        padding: 40px 20px;
+        position: relative;
+
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            background: #dadada;
+            border-radius: 50% 0;
+            padding: 4px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.js-accordion h4 {
+    display: none;
+}
+
+.js-accordion p.ativo {
+    display: block;
+}

@@ -1,0 +1,66 @@
+:root {
+  --main: ;
+  --light: ;
+  --sec: ;
+  --dark: ;
+  --font: ;
+}
+
+#adopt-controller-button {
+  z-index: 100 !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whats-fixed {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  animation: move 3s infinite;
+  z-index: 222;
+  max-width: 65px;
+}
+
+@keyframes move {
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+html {
+  font-size: 16px;
+  background: #badeeb;
+}
+
+.view {
+  transition: .6s;
+}
+
+a,
+a img,
+svg path,
+button {
+  transition: 0.3s;
+}
+
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}

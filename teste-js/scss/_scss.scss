@@ -1,0 +1,37 @@
+@function rem($n) {
+    @return (((($n * 100) / 16) / 100))+rem;
+}
+
+@mixin font-outline {
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
+}
+
+@mixin font-outline-custom($n, $color) {
+    text-shadow: 0 0 $n+px $color, 0 0 $n+px $color, 0 0 $n+px $color, 0 0 $n+px $color, 0 0 $n+px $color, 0 0 $n+px $color, 0 0 $n+px $color;
+}
+
+@mixin font($size, $weight: 400, $lHeight: 1.4em) {
+    font-size: rem($size);
+    font-weight: $weight;
+    line-height: $lHeight;
+}
+
+@mixin btn($pad, $br, $bgc: transparent) {
+    padding: $pad;
+    border-radius: $br;
+    background-color: $bgc;
+}
+
+@mixin flex($gap: 0, $jus: center, $align: center) {
+    display: flex;
+    justify-content: $jus;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin detail($w, $h, $bg) {
+    width: $w;
+    height: $h;
+    background-color: $bg;
+    display: block;
+}

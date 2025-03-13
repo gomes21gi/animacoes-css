@@ -1,0 +1,50 @@
+.mexe-img {
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+// pula, voa
+.mexe-img-grid {
+    @include flex(40px, left);
+    flex-wrap: wrap;
+
+    // pula
+    .pula {
+        width: 400px;
+        margin-top: 30px;
+        animation: is-bouncing 1s ease infinite;
+    }
+
+    @keyframes is-bouncing {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    // voa
+    .voa {
+        overflow: hidden;
+        width: 300px;
+        // animation-name: fly;
+        // animation-duration: 1.5s;
+        // animation-timing-function: linear;
+        // animation-delay: .9s;
+        animation-iteration-count: 2;
+        // animation-direction: alternate-reverse;
+        // animation-fill-mode: both;
+        animation: fly 1.5s linear;
+
+    }
+
+    @keyframes fly {
+        100% {
+            transform: translateX(calc(100vw - 200px));
+        }
+    }
+}

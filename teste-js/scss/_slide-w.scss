@@ -1,0 +1,139 @@
+.part1 {
+    padding: 30px;
+}
+
+.slide-grid {
+    position: relative;
+    z-index: 10;
+}
+
+.slide-wrapper {
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+}
+
+.slide:hover {
+    will-change: transform;
+}
+
+.slide>li {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 285px;
+    transition: 0.4s;
+    margin: 0 10px 20px;
+    padding: 15px 10px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    height: 100%;
+    background-color: transparent;
+
+
+    &:hover {
+        filter: drop-shadow(0 0 5px var(--dark));
+        margin: 0 20px;
+    }
+
+    @media only screen and(max-width: 500px) {
+        transform: scale(0.9);
+
+    }
+}
+
+a>img {
+    border-radius: 44px;
+    height: 200px;
+    width: 285px;
+}
+
+.slide li.active {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 5px var(--dark));
+    margin: 20px;
+}
+
+[data-control="slide"] li a {
+    display: block;
+}
+
+.arrow-nav {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 2rem;
+}
+
+.next {
+    position: absolute;
+    right: 100px;
+}
+
+.prev {
+    position: absolute;
+    left: 100px;
+}
+
+.next,
+.prev {
+    transform: translateY(-50%) scale(0.8);
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+}
+
+.next:hover,
+.prev:hover {
+    transform: translateY(-50%) scale(1);
+}
+
+.slide-grid {
+    position: relative;
+}
+
+.custom-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.custom-controls li {
+    height: 10px;
+    width: 10px;
+    background: #7D3425;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.custom-controls li.active {
+    border: 2px solid var(--dark);
+}
+
+// @media only screen and (min-width: 0px) and (max-width: 650px) {
+
+//     .next,
+//     .prev {
+//         position: absolute;
+//         max-width: 60px;
+//     }
+
+//     .next {
+//         right: 10px;
+//     }
+
+//     .prev {
+//         left: 10px;
+//     }
+// }

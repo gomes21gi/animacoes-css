@@ -1,0 +1,48 @@
+.main {
+    padding: 50px 10px;
+    gap: 15px;
+}
+
+.main-content {
+    display: grid;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+
+    h1 {
+        @include font(36, 700, 1.1em);
+        color: var(--dark);
+    }
+
+    .clica {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        max-width: 750px;
+
+        .botoes {
+            background: var(--main);
+            color: var(--light);
+            padding: 10px 20px;
+            min-width: 100px;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            @include font(20, 700);
+            @include flex(40px);
+            border-radius: 12px;
+            box-shadow: 0 -6px 0 #02939d inset;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .botoes:hover {
+            box-shadow: 0 -50px 0 #02939d inset;
+        }
+    }
+
+
+}

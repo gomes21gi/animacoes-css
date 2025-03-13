@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" type="text/css" content="João Binelo">
+
+    <meta name="rating" content="General" /> <!--Contra indicação de idade-->
+    <meta name="revisit-after" content="60 days" /><!--Dias que deve refazer cache-->
+    <meta name="reply-to" content="felipedegenerportella@yahoo.com"><!--Para qual email são enviadas notificações-->
+    <meta name="robots" content="index, follow"><!--Robots-->
+    <meta name="GOOGLEBOT" content="follow, index" /><!--Google Boot-->
+    <meta name="Publisher-Email" content="felipedegenerportella@yahoo.com" />
+    <meta name="distribution" content="Regional" /><!--Informa se a distribuição é global ou regional-->
+    <meta name="doc-class" content="Completed" /><!--Informa a classe do documento-->
+    <meta name="doc-rights" content="Public" /> <!--Informa se as informações são publicas, privadas ou internas-->
+    <meta name="copyright" content="João Binelo" /><!--Quem produziu o site-->
+
+    <!-- fonts -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<!-- <span class="view"></span> -->
+<body>
+        <a href="/index.html">Tabs</a>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+                
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+                
+    <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p> 
+    </div>
+                
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+        <div class="gif2">
+            <img src="/img/tokyo.jpg">
+        </div>
+    </div>
+   
+    <script src="/js/tabs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+</body>
+
+</html>

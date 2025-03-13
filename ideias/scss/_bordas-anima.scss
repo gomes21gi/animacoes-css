@@ -1,0 +1,291 @@
+.bordas-anima {
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+
+// borda-grad, borda-grad2, borda-grad3, borda-led, borda-duo, borda-duo2, borda-pulse
+.bordas-anima-grid {
+    @include flex(60px, space-between);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    text-align: center;
+    flex-wrap: wrap;
+
+    h2 {
+        @include font(22, 800);
+        margin-bottom: 5px;
+    }
+
+    p {
+        @include font(16, 500, );
+    }
+
+    //borda-grad
+    .borda-grad {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        background: #00111d;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .borda-grad::after,
+    .borda-grad::before {
+        content: " ";
+        position: absolute;
+        height: 103%;
+        width: 103%;
+        background: conic-gradient(#f04329, #e72670, #23a6d5, #23d5ab, #f04329);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        border-radius: 15px;
+    }
+
+    .borda-grad::before {
+        filter: blur(1.5rem);
+        // opacity: .5;
+    }
+
+    // borda-grad2
+    .borda-grad2 {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        background: #00111d;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .borda-grad2::after,
+    .borda-grad2::before {
+        content: " ";
+        position: absolute;
+        height: 103%;
+        width: 103%;
+        background: conic-gradient(from var(--angle), #4d0b6b, #082eac, #59d3f8, #d375ff, #4d0b6b);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        border-radius: 15px;
+        animation: 3s roda-roda linear infinite;
+    }
+
+    .borda-grad2::before {
+        filter: blur(1.5rem);
+        // opacity: .5;
+    }
+
+    @keyframes roda-roda {
+        from {
+            --angle: 0deg;
+        }
+
+        to {
+            --angle: 0deg;
+        }
+    }
+
+    // borda-grad2
+    .borda-grad3 {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        background: #00111d;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .borda-grad3::after,
+    .borda-grad3::before {
+        content: " ";
+        position: absolute;
+        height: 103%;
+        width: 103%;
+        background: conic-gradient(from var(--angle), #4d0b6b, #082eac, #59d3f8, #d375ff, #4d0b6b);
+        top: -4px;
+        left: -4px;
+        z-index: -1;
+        border-radius: 10px;
+        animation: 3s roda-roda linear infinite, pulse 3s linear infinite;
+    }
+
+    .borda-grad3::before {
+        filter: blur(1.5rem);
+        opacity: .8;
+    }
+
+    @keyframes roda-roda {
+        from {
+            --angle: 0deg;
+        }
+
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    // borda-led
+    .borda-led {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        background: #00111d;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .borda-led::after,
+    .borda-led::before {
+        content: " ";
+        position: absolute;
+        height: 103%;
+        width: 103%;
+        background: conic-gradient(from var(--angle), transparent 90%, blue);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        border-radius: 15px;
+        animation: 3s spin linear infinite;
+    }
+
+    .borda-led::before {
+        filter: blur(1.5rem);
+        // opacity: .5;
+    }
+
+    @keyframes spin {
+        from {
+            --angle: 0deg;
+        }
+
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    // borda-duo
+    .borda-duo {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        background: #00111d;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .borda-duo::after,
+    .borda-duo::before {
+        content: " ";
+        position: absolute;
+        height: 103%;
+        width: 103%;
+        background: conic-gradient(from var(--angle), blue 0deg, transparent 60deg, transparent 180deg, blue 180deg, transparent 240deg);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        border-radius: 15px;
+        animation: 3s spin linear infinite;
+    }
+
+    .borda-duo::before {
+        filter: blur(1.5rem);
+        // opacity: .5;
+    }
+
+    @keyframes spin {
+        from {
+            --angle: 0deg;
+        }
+
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    // borda-duo2
+    .borda-duo2 {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        background: #00111d;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .borda-duo2::after,
+    .borda-duo2::before {
+        content: " ";
+        position: absolute;
+        height: 103%;
+        width: 103%;
+        background: conic-gradient(from var(--angle), blue 0deg, transparent 60deg, transparent 180deg, blue 180deg, transparent 240deg);
+        top: -4px;
+        left: -4px;
+        z-index: -1;
+        border-radius: 10px;
+        animation: 3s spin linear infinite, pulse 3s linear infinite;
+    }
+
+    .borda-duo2::before {
+        filter: blur(1.5rem);
+        opacity: .8;
+    }
+
+    @keyframes spin {
+        from {
+            --angle: 0deg;
+        }
+
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    // borda-pulse
+    .borda-pulse {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        background: #00111d;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .borda-pulse::after,
+    .borda-pulse::before {
+        content: " ";
+        position: absolute;
+        height: 103%;
+        width: 103%;
+        background: blue;
+        top: -4px;
+        left: -4px;
+        z-index: -1;
+        border-radius: 10px;
+        animation: pulse 3s linear infinite;
+    }
+
+    .borda-pulse::before {
+        filter: blur(1.5rem);
+        opacity: .8;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: scale(0.96);
+        }
+
+        50% {
+            transform: scale(1.01);
+        }
+    }
+}

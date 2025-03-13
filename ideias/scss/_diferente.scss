@@ -1,0 +1,45 @@
+.diferente {
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+// box, c-loader
+.diferente-grid {
+    @include flex(40px, space-around);
+    flex-wrap: wrap;
+
+    // box
+    .box {
+        background: rgb(89, 0, 255);
+        height: 300px;
+        width: 300px;
+
+        transition-property: background, border-radius;
+        transition-duration: .2s, 1.5s;
+        // transition-delay: .5s;
+        // transition-timing-function: ease-in-out;
+        transition-timing-function: cubic-bezier(.15, .89, .85, .26);
+
+        &:hover {
+            border-radius: 50%;
+            background: rgb(16, 114, 101);
+        }
+    }
+
+    // carrega
+    .c-loader {
+        animation: is-rotating 1s infinite;
+        border: 8px solid #e5e5e5;
+        border-top: 8px solid #0b456b;
+        border-right: 8px solid #e5e5e500;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    @keyframes is-rotating {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+}

@@ -1,0 +1,65 @@
+:root {
+  --main: #ad9ce5;
+  --light: #fff;
+  --sec: #02939d;
+  --dark: #a843ec;
+  --font: ;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whats-fixed {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  animation: move 3s infinite;
+  z-index: 222;
+  max-width: 65px;
+}
+
+@keyframes move {
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+.view {
+  transition: .6s;
+}
+
+a,
+a img,
+svg path,
+button {
+  transition: 0.3s;
+}
+
+a {
+  @include font(36, 700, 1.1em);
+  color: var(--sec);
+  text-align: center;
+  max-width: fit-content;
+
+  &:hover {
+    text-shadow: 0 10px 20px var(--sec);
+  }
+}

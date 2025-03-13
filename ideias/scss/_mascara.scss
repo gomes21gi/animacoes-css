@@ -1,0 +1,59 @@
+.mascara {
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+// clip-path
+.mascara-grid {
+    @include flex(40px);
+    flex-wrap: wrap;
+
+    img {
+        max-width: 200px;
+        display: block;
+    }
+
+    #mask1 {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    #mask2 {
+        clip-path: circle(100%);
+        transition: clip-path .3s ease-out;
+
+        &:hover {
+            clip-path: circle(30%);
+        }
+    }
+
+    #mask3 {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    #mask4 {
+        clip-path: url(#svgMask1);
+    }
+
+    #mask5 {
+        clip-path: url(#svgMask2);
+    }
+
+    #mask6 {
+        clip-path: url(#svgMask3);
+    }
+
+    .mask {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+    }
+
+    #mask7 {
+        clip-path: url(#svgMask4);
+    }
+
+    #mask8 {
+        clip-path: path('M 10,50 L 90,50 A 10,10 0,0,0 100,40 L 100,10 A 10,10 0,0,1 110,0 L 190,0 A 10,10 0,0,1 200,10 L 200,190 A 10,10 0,0,1 190,200 L 10,200 A 10,10 0,0,1 0,190 L 0,60 A 10,10 0,0,1 10,50 Z');
+    }
+}
