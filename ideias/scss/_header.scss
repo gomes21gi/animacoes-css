@@ -4,11 +4,89 @@
 
 .header-grid {
   @include flex(30px, space-between);
+
+  .logo {
+    width: 90px;
+    animation: dance 9s infinite;
+  }
+}
+
+@keyframes dance {
+
+  0%,
+  25%,
+  45%,
+  65%,
+  85% {
+    transform: translateX(20px);
+
+  }
+
+  5%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  35%,
+  55%,
+  75%,
+  95% {
+    transform: translateX(-20px);
+  }
 }
 
 .nav-menu {
-  display: flex;
-  gap: 20px;
   align-items: center;
   align-items: center;
+  list-style: none;
+  @include flex(20px);
+  flex-wrap: wrap;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    @include font(18, 600);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    padding: 3px 8px;
+  }
+
+  .estouaqui {
+    color: #4d0b6b;
+    border-bottom: 2px solid #4d0b6b;
+  }
+}
+
+.nav-menu:hover a {
+  opacity: .7;
+}
+
+.nav-menu a:hover {
+  color: #4d0b6b;
+  opacity: 1;
+}
+
+.nav-menu a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background: #4d0b6b;
+  color: #4d0b6b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: .3s ease-in-out;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
 }

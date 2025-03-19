@@ -1,0 +1,24 @@
+.main {
+    padding: 50px 10px;
+}
+
+.main-grid {
+    @include flex(40px);
+    flex-wrap: wrap;
+
+    .botoes {
+        display: grid;
+        padding: 10px 30px;
+        background: #00949e;
+        color: white;
+        border-radius: 20px;
+        max-width: 180px;
+        width: 100%;
+        @include font(20);
+        text-align: center;
+
+        &:hover {
+            background: #66a1a5;
+        }
+    }
+}

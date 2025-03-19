@@ -51,48 +51,33 @@
 <body>
     <!-- header -->
     <header class="header" aria-label="header">
-        <div class="header-grid container" style="display: flex;justify-content: center;">
+        <div class="header-grid container">
             <div class="logo"><a href="index.html"><img src="/img/logo.png" alt="esquilo"></a></div>
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false"><span id="hamburger"></span></button>
+            <nav data-menu="list" id="menu" role="menu" class="nav-menu">
+                <a href="animaImg.html">Anima Img</a>
+                <a href="animaText.html">Anima Text</a>
+                <a href="background.html" class="estouaqui">Background</a>
+                <a href="bordasAnimadas.html">Bordas</a>
+                <a href="card.html">Card</a>
+                <a href="clipPath.html">Clip-Path</a>
+                <a href="menus.html">Menus</a>
+            </nav>
         </div>
     </header>
 
     <!-- main -->
     <main class="main" aria-label="main">
         <div class="main-grid container">
-            <a href="animaImg.html" class="botoes">Anima Img</a>
-            <a href="animaText.html" class="botoes">Anima Text</a>
-            <a href="background.html" class="botoes">Background</a>
-            <a href="bordasAnimadas.html" class="botoes">Bordas</a>
-            <a href="card.html" class="botoes">Card</a>
-            <a href="clipPath.html" class="botoes">Clip-Path</a>
-            <a href="menus.html" class="botoes">Menus</a>
+            
         </div>
     </main>
 
-    <!-- box, c-loader -->
-    <!-- <section class="diferente" aria-label="diferente">
-        <div class="diferente-grid container">
-            <div class="box"></div>
-        
-            <div class="c-loader"></div>
+    <!-- gradiente-bg -->
+    <section class="gradiente-bg" aria-label="gradiente-bg">
+        <div class="gradiente-bg-grid container">
         </div>
-    </section> -->
-     
-    <!-- digitalmix -->
-    <!-- <section class="digitalmix">
-
-        <div class="digitalmix-grid container">
-
-            <div>
-                <p>Desenvolvido por:</p>
-                <a target="_blank" href="https://www.digitalmix.tech/"><img src="/img/digitalmix.svg"
-                        alt="digitalmix"></a>
-            </div>
-            <p>Especialistas em criação de sites e tráfego pago, com muito ♡, ética e profissionalismo :)</p>
-
-        </div>
-
-    </section> -->
+    </section>
 
     <script src="/js/view.js"></script>
     <script src="/js/banner.js"></script>
