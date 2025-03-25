@@ -71,3 +71,253 @@
         }
     }
 }
+
+.surto {
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+.surto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 40px 0px;
+}
+
+.muda-img,
+.muda-imgs,
+.muda,
+.mudas,
+.mudando,
+.fecha {
+    grid-area: 1/1;
+    block-size: 70vh;
+    text-align: center;
+    align-content: center;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+@property --position {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+.wipe-effect-1 .muda-img:nth-child(2),
+.wipe-effect-2 .muda-imgs:nth-child(2),
+.wipe-effect-3 .muda:nth-child(2),
+.wipe-effect-4 .mudas:nth-child(2),
+.wipe-effect-5 .mudando:nth-child(2),
+.wipe-effect-6 .fecha:nth-child(2) {
+    --size: 40%;
+    mask-image: linear-gradient(90deg, #000, #0000);
+    mask-image: linear-gradient(90deg, #000 40%, #0000 40%);
+    mask-image: linear-gradient(90deg, #000 0%, #0000 40%);
+    mask-image: linear-gradient(90deg, #000 -40%, #0000 0%);
+    mask-image: linear-gradient(90deg, #000 100%, #0000 140%);
+}
+
+.muda-img:nth-child(2):hover,
+.muda-imgs:nth-child(2):hover,
+.muda:nth-child(2):hover,
+.mudas:nth-child(2):hover,
+.mudando:nth-child(2):hover,
+.fecha:nth-child(2):hover {
+    --position: calc(100% + var(--size));
+}
+
+// efeito 1
+.muda-img:nth-child(1) {
+    background-color: #4eadad;
+    background: url(/img/papel-de-parede-paisagem-montanhas-geladas.jpg.webp) no-repeat center center;
+    background-size: cover;
+
+}
+
+.muda-img:nth-child(2) {
+    background-color: #6126a5;
+    background: url(/img/paisagem-neve.jpg) no-repeat center center;
+    background-size: cover;
+
+}
+
+.wipe-effect-1 .muda-img:nth-child(2) {
+    /*
+        initial:
+        #000 (0% - 40% = -40%)
+        #0000 0%
+
+        hover: 
+        #000 (140% - 40% = 100%)
+        #0000 140%
+    */
+    mask-image: linear-gradient(90deg, #000 calc(var(--position) - var(--size)), #0000 calc(var(--position)));
+    transition: --position 0.75s ease-in-out;
+}
+
+
+// efeito 2
+.muda-imgs:nth-child(1) {
+    background-color: #4eadad;
+    background: url(/img/Gwto.gif) no-repeat center center;
+    background-size: cover;
+
+}
+
+.muda-imgs:nth-child(2) {
+    background-color: #6126a5;
+    background: url(/img/tumbleweed-desert.gif) no-repeat center center;
+    background-size: cover;
+}
+
+.wipe-effect-2 .muda-imgs:nth-child(2) {
+    /*
+        initial:
+        #000 (0% - 40% = -40%)
+        #0000 0%
+
+        hover: 
+        #000 (140% - 40% = 100%)
+        #0000 140%
+    */
+    mask-image: radial-gradient(circle, #000 calc(var(--position) - var(--size)), #0000 calc(var(--position)));
+    transition: --position 0.75s ease-in-out;
+}
+
+
+// efeito 3
+.muda:nth-child(1) {
+    background-color: #4eadad;
+    background: url(/img/husky.webp) no-repeat center center;
+    background-size: cover;
+
+}
+
+.muda:nth-child(2) {
+    background-color: #6126a5;
+    background: url(/img/lobo.webp) no-repeat center center;
+    background-size: cover;
+
+}
+
+.wipe-effect-3 .muda:nth-child(2) {
+
+    /*
+        initial:
+        #000 (0% - 40% = -40%)
+        #0000 0%
+
+        hover: 
+        #000 (140% - 40% = 100%)
+        #0000 140%
+    */
+    mask-image: conic-gradient(#000 calc(var(--position) - var(--size)), #0000 calc(var(--position)));
+    transition: --position 0.75s ease-in-out;
+}
+
+
+// efeito 4
+.mudas:nth-child(1) {
+    background-color: #4eadad;
+    background: url(/img/pato.jpeg) no-repeat top center;
+    background-size: cover;
+
+}
+
+.mudas:nth-child(2) {
+    background-color: #6126a5;
+    background: url(/img/Pato_pocoyo.webp) no-repeat center center;
+    background-size: cover;
+
+}
+
+.wipe-effect-4 .mudas:nth-child(2) {
+    --step: 10%;
+
+    /*
+        #000 -40%
+        rgba(0 0 0 / 75%) 0 -30%
+        rgba(0 0 0 / 50%) 0 -20%
+        rgba(0 0 0 / 25%) 0 -10%
+        #0000 0 0%
+    */
+    mask-image: linear-gradient(90deg,
+            #000 calc(var(--position) - var(--size)),
+            rgba(0, 0, 0, 0.75) 0 calc(var(--position) - var(--size) + (var(--step) * 1)),
+            rgba(0, 0, 0, 0.50) 0 calc(var(--position) - var(--size) + (var(--step) * 2)),
+            rgba(0, 0, 0, 0.25) 0 calc(var(--position) - var(--size) + (var(--step) * 3)),
+            #0000 0 calc(var(--position)));
+    transition: --position 1.5s ease-in-out;
+}
+
+
+// efeito 5
+.mudando:nth-child(1) {
+    background-color: #4eadad;
+    background: url(/img/hedgehog-petlove.jpg) no-repeat center center;
+    background-size: cover;
+
+}
+
+.mudando:nth-child(2) {
+    background-color: #6126a5;
+    background: url(/img/esquilo.jpg) no-repeat center center;
+    background-size: cover;
+
+}
+
+.wipe-effect-5 .mudando:nth-child(2) {
+    --step: 10%;
+
+    /*
+        #000 -40%
+        rgba(0 0 0 / 75%) 0 -30%
+        rgba(0 0 0 / 50%) 0 -20%
+        rgba(0 0 0 / 25%) 0 -10%
+        #0000 0 0%
+    */
+    mask-image: radial-gradient(circle,
+            #000 calc(var(--position) - var(--size)),
+            rgba(0, 0, 0, 0.75) 0 calc(var(--position) - var(--size) + (var(--step) * 1)),
+            rgba(0, 0, 0, 0.50) 0 calc(var(--position) - var(--size) + (var(--step) * 2)),
+            rgba(0, 0, 0, 0.25) 0 calc(var(--position) - var(--size) + (var(--step) * 3)),
+            #0000 0 calc(var(--position)));
+    transition: --position 1.5s ease-in-out;
+}
+
+
+// efeito 6
+.fecha:nth-child(1) {
+    background-color: #4eadad;
+    background: url(/img/cofap1.avif) no-repeat top center;
+    background-size: cover;
+}
+
+.fecha:nth-child(2) {
+    background-color: #6126a5;
+    background: url(/img/cofap2.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.wipe-effect-6 .fecha:nth-child(2) {
+    --step: 10%;
+
+    /*
+        #000 -40%
+        rgba(0 0 0 / 75%) 0 -30%
+        rgba(0 0 0 / 50%) 0 -20%
+        rgba(0 0 0 / 25%) 0 -10%
+        #0000 0 0%
+    */
+    mask-image: conic-gradient(#000 calc(var(--position) - var(--size)),
+            rgba(0, 0, 0, 0.75) 0 calc(var(--position) - var(--size) + (var(--step) * 1)),
+            rgba(0, 0, 0, 0.50) 0 calc(var(--position) - var(--size) + (var(--step) * 2)),
+            rgba(0, 0, 0, 0.25) 0 calc(var(--position) - var(--size) + (var(--step) * 3)),
+            #0000 0 calc(var(--position)));
+    transition: --position 1.5s ease-in-out;
+}

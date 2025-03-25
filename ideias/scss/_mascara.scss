@@ -14,8 +14,22 @@
     }
 
     #mask1 {
-        border-radius: 50%;
+        clip-path: circle(50%);
         overflow: hidden;
+
+        &:hover {
+            animation: formas 8s forwards;
+        }
+
+        @keyframes formas {
+            0% {
+                clip-path: ellipse(70% 100%);
+            }
+
+            100% {
+                clip-path: circle(100%);
+            }
+        }
     }
 
     #mask2 {
@@ -29,6 +43,12 @@
 
     #mask3 {
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        transition: 1s;
+
+        &:hover {
+            clip-path: polygon(40% 0%, 100% 40%, 40% 100%, 0% 40%);
+
+        }
     }
 
     #mask4 {

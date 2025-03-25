@@ -52,17 +52,8 @@
     <!-- header -->
     <header class="header" aria-label="header">
         <div class="header-grid container">
+            <a href="index.html">< Voltar</a>
             <div class="logo"><a href="index.html"><img src="/img/logo.png" alt="esquilo"></a></div>
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false"><span id="hamburger"></span></button>
-            <nav data-menu="list" id="menu" role="menu" class="nav-menu">
-                <a href="animaImg.html">Anima Img</a>
-                <a href="animaText.html">Anima Text</a>
-                <a href="background.html">Background</a>
-                <a href="bordasAnimadas.html" class="estouaqui">Bordas</a>
-                <a href="card.html">Card</a>
-                <a href="clipPath.html">Clip-Path</a>
-                <a href="menus.html">Menus</a>
-            </nav>
         </div>
     </header>
 
@@ -73,9 +64,159 @@
         </div>
     </main>
 
+    <section class="redes-gradiente" aria-label="redes gradiente">
+        <div class="redes-gradiente-grid container">
+            <div>
+                <span id="roda-roda"><img src="/img/insta.svg" alt=""></span>
+                <a href=""></a>
+            </div>
+            <div>
+                <span id="roda-roda"><img src="/img/insta.svg" alt=""></span>
+                <a href=""></a>
+            </div>
+            <div>
+                <span id="roda-roda"><img src="/img/insta.svg" alt=""></span>
+                <a href=""></a>
+            </div>
+            <div>
+                <span id="roda-roda"><img src="/img/insta.svg" alt=""></span>
+                <a href=""></a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- bordas-redes -->
+    <section class="bordas-redes" aria-label="bordas para redes">
+        <div class="bordas-redes-grid container">
+            <!-- <a href="" title="insta">
+             <img src="/img/whats-fixed.svg" alt="">
+                <i class="bi bi-insta"></i></a>
+
+            <a href="" title="face">
+                <img src="/img/whats-fixed.svg" alt="">
+                <i class="bi bi-face"></i></a>
+
+            <a href="" title="email">
+                <img src="/img/whats-fixed.svg" alt="">
+                <i class="bi bi-email"></i></a>
+
+            <a href="" title="youtube">
+                <img src="/img/whats-fixed.svg" alt="">
+                <i class="bi bi-youtube"></i></a>
+
+            <a href="" title="twitter">
+                <img src="/img/whats-fixed.svg" alt="">
+                <i class="bi bi-twitter"></i></a> -->
+
+                <a href="https://www.youtube.com/@optimisticweb" title="YouTube">
+                    <img src="/img/insta.svg" alt="">
+                  </a>
+                  
+                <a href="https://www.youtube.com/@optimisticweb" title="YouTube">
+                    <img src="/img/insta.svg" alt="">
+                  </a>
+                
+                  <a href="https://twitter.com/optimisticweb" title="Twitter">
+                    <img src="/img/insta.svg" alt="">
+                  </a>
+                
+                  <a href="https://www.instagram.com/optimisticweb" title="Instagram">
+                    <img src="/img/insta.svg" alt="">
+                  </a>
+                
+                  <a href="#" title="Behance">
+                    <img src="/img/insta.svg" alt="">
+                  </a>
+                
+                  <a href="#" title="Dribbble">
+                    <img src="/img/insta.svg" alt="">
+                  </a>
+        </div>
+    </section>
+
     <!-- borda-grad, borda-grad2, borda-grad3, borda-led, borda-duo, borda-duo2, borda-pulse -->
     <section class="bordas-anima" aria-label="bordas-anima">
         <div class="bordas-anima-grid container">
+            <!-- <div class="guarda-borda">
+                <div class="copia-code">
+                    <pre>
+                        <code id="codigo">
+                            .borda-grad {
+                                margin: 0 auto;
+                                width: 300px;
+                                padding: 1em;
+                                background: #00111d;
+                                border-radius: 10px;
+                                position: relative;
+                                }
+                        
+                            .borda-grad::after,
+                            .borda-grad::before {
+                                content: " ";
+                                position: absolute;
+                                height: 103%;
+                                width: 103%;
+                                background: conic-gradient(#f04329, #e72670, #23a6d5, #23d5ab, #f04329);
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                z-index: -1;
+                                border-radius: 15px;
+                                }
+                                
+                            .borda-grad::before {
+                                filter: blur(1.5rem);
+                                // opacity: .5;
+                                }
+                        
+                                // borda-grad2
+                            .borda-grad2 {
+                                margin: 0 auto;
+                                width: 300px;
+                                padding: 1em;
+                                background: #00111d;
+                                border-radius: 10px;
+                                position: relative;
+                            }
+                        
+                            .borda-grad2::after,
+                            .borda-grad2::before {
+                                content: " ";
+                                position: absolute;
+                                height: 103%;
+                                width: 103%;
+                                background: conic-gradient(from var(--angle), #4d0b6b, #082eac, #59d3f8, #d375ff, #4d0b6b);
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                z-index: -1;
+                                border-radius: 15px;
+                                animation: 3s roda-roda linear infinite;
+                                }
+                                
+                                .borda-grad2::before {
+                                filter: blur(1.5rem);
+                                // opacity: .5;
+                                }
+                        
+                                @keyframes roda-roda {
+                                from {
+                                    --angle: 0deg;
+                                    }
+                                    
+                                to {
+                                    --angle: 0deg;
+                                    }
+                                    }
+                                    
+                                </code>
+                    </pre>
+                    <button onclick="copiaCodigo()">Copiar Código</button>
+
+                </div>
+            </div> -->
+
             <div class="borda-grad">
                 <h2>TExt</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium veniam maxime aliquam perspiciatis quas, perferendis debitis, tempore commodi nesciunt labore nostrum exercitationem voluptatem reprehenderit modi velit facere eligendi aspernatur. Odit.</p>
@@ -113,10 +254,12 @@
         </div>
     </section>
 
+
     <script src="/js/view.js"></script>
-    <script src="/js/banner.js"></script>
+    <script src="/js/display.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/menu-mobile.js"></script>
+    <script src="/js/copiaCodigo.js"></script>
 </body>
 
 </html>

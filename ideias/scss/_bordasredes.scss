@@ -1,0 +1,187 @@
+.bordas-redes {
+    padding: 80px 10px;
+}
+
+.bordas-redes-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inline-size: 5rem;
+        aspect-ratio: 1;
+        font-size: 2rem;
+        color: #636363;
+        background-color: #555555;
+        border-radius: 50%;
+        transition: color 0.6s 0.3s ease-in-out;
+
+        img {
+            width: 40px;
+        }
+    }
+
+    a::before,
+    a::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        inset: -5px;
+        border-radius: inherit;
+        background: conic-gradient(currentColor var(--fill), transparent var(--fill));
+        transition: --fill 0.6s 0.3s ease-in-out;
+    }
+
+    a:hover,
+    a:focus-visible,
+    a:focus-within {
+        color: rgb(109, 8, 8);
+        outline: 1px solid transparent;
+
+        img {
+            filter: brightness(0) saturate(100%) invert(5%) sepia(86%) saturate(7479%) hue-rotate(4deg) brightness(91%) contrast(94%);
+        }
+    }
+
+    a:hover,
+    a:hover::before,
+    a:hover::after {
+        transition-delay: 0s;
+    }
+
+    a:nth-child(1):hover,
+    a:nth-child(1):focus-visible,
+    a:nth-child(1):focus-within {
+        --fill: 100%;
+    }
+
+    a:nth-child(1)::after {
+        display: none;
+    }
+
+    a:nth-child(2):hover,
+    a:nth-child(2):focus-visible,
+    a:nth-child(2):focus-within {
+        --fill: 100%;
+    }
+
+    a:nth-child(2)::before {
+        transform: rotateY(180deg);
+    }
+
+    a:nth-child(2)::after {
+        display: none;
+    }
+
+    a:nth-child(3):hover,
+    a:nth-child(3):focus-visible,
+    a:nth-child(3):focus-within {
+        --fill: 50%;
+    }
+
+    a:nth-child(3)::after {
+        transform: rotateY(180deg);
+    }
+
+    a:nth-child(4):hover,
+    a:nth-child(4):focus-visible,
+    a:nth-child(4):focus-within {
+        --fill: 50%;
+    }
+
+    a:nth-child(4)::before {
+        transform: rotateX(180deg);
+    }
+
+    a:nth-child(4)::after {
+        transform: rotate(180deg);
+    }
+
+    a:nth-child(5):hover,
+    a:nth-child(5):focus-visible,
+    a:nth-child(5):focus-within {
+        --fill: 50%;
+    }
+
+    a:nth-child(5)::after {
+        transform: rotate(180deg);
+    }
+
+    a:nth-child(6):hover,
+    a:nth-child(6):focus-visible,
+    a:nth-child(6):focus-within {
+        --fill: 50%;
+    }
+
+    a:nth-child(6)::before {
+        transform: rotate(90deg);
+    }
+
+    a:nth-child(6)::after {
+        transform: rotate(270deg);
+    }
+}
+
+@property --fill {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+
+.redes-gradiente {
+    padding: 80px 10px;
+}
+
+.redes-gradiente-grid {
+    @include flex(30px);
+
+    div {
+        width: 75px;
+        height: 75px;
+        position: relative;
+
+        a {
+            background: linear-gradient(45deg, #013031, #790857);
+            padding: 15px;
+            width: 75px;
+            height: 75px;
+            border-radius: 25%;
+            transition: .6s;
+
+        }
+
+        #roda-roda {
+            position: absolute;
+            cursor: pointer;
+            top: 50%;
+            left: 50%;
+            z-index: 9;
+            transform: translate(-50%, -50%) rotate(0) scale(1.1);
+            width: 45px;
+            transition: .6s;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+
+        &:hover {
+            a {
+                transform: rotate(270deg);
+                border-radius: 50%;
+            }
+
+            #roda-roda {
+                transform: translate(-50%, -50%) rotate(-360deg) scale(1.2);
+            }
+        }
+    }
+
+
+}

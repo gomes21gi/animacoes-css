@@ -1,9 +1,17 @@
 .header {
   padding: 50px 10px;
+  overflow: hidden;
 }
 
 .header-grid {
   @include flex(30px, space-between);
+
+  .voltando {
+    border: 2px solid #00949e;
+    background: #00949e2d;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
 
   .logo {
     width: 90px;

@@ -52,7 +52,7 @@
     <!-- header -->
     <header class="header" aria-label="header">
         <div class="header-grid container">
-            <a href="index.html">< Voltar</a>
+            <a href="index.html"><- Voltar</a>
             <div class="logo"><a href="index.html"><img src="/img/logo.png" alt="esquilo"></a></div>
         </div>
     </header>
@@ -64,33 +64,35 @@
         </div>
     </main>
 
-    <!-- surge, linha -->
-    <section class="menus" aria-label="menus">
-        <div class="menus-grid container">
-            <nav class="surge">
-                <ul class="surge-ul">
-                    <li><a href="">sobre</a></li>
-                    <li><a href="">produto</a></li>
-                    <li><a href="">plano</a></li>
-                    <li><a href="">galeria</a></li>
-                    <li><a href="">contato</a></li>
+    <div class="filter">
+        <div class="filter-grid container">
+            <div class="filter-content">
+
+                <ul class="js-tabcontent">
+                    <li>
+                        <img src="/img/hedgehog-petlove.jpg" id="capi">
+                    </li>
                 </ul>
-            </nav>
 
-            <nav class="linha">
-                <a href="">sobre</a>
-                <a href="">produto</a>
-                <a href="">plano</a>
-                <a href="">galeria</a>
-                <a href="">contato</a>
-            </nav>
+                <div class="geral">
+                    <button onclick="blurFunction()">Blur</button>
+                    <button onclick="brightnessFunction()">Brightness</button>
+                    <button onclick="contrastFunction()">Contrast</button>
+                    <button onclick="grayscaleFunction()">Grayscale</button>
+                    <button onclick="hueFunction()">Hue-rotate</button>
+                    <button onclick="invertFunction()">Invert</button>
+                    <button onclick="opacityFunction()">Opacity</button>
+                    <button onclick="saturateFunction()">Saturate</button>
+                    <button onclick="sepiaFunction()">Sepia</button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <script src="/js/view.js"></script>
-    <script src="/js/banner.js"></script>
-    <script src="/js/index.js"></script>
-    <script src="/js/menu-mobile.js"></script>
 </body>
-
+<script src="/js/menu-mobile.js"></script>
+<script src="/js/view.js"></script>
+<script src="/js/filter.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glidejs@2.1.0/dist/glide.js"></script>    
 </html>

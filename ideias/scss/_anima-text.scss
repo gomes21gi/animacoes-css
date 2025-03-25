@@ -7,7 +7,7 @@
 .anima-text-grid {
     display: grid;
     justify-items: center;
-    gap: 30px;
+    gap: 50px;
     @include font(25, 800);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -81,6 +81,7 @@
     .completa {
         // display: flex;
         // gap: 4px;
+        margin-bottom: 40px;
 
         span {
             position: relative;
@@ -167,5 +168,94 @@
             content: "Elit, Sed Do";
         }
 
+    }
+
+    // reflete 
+    .reflete {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-top: -50px;
+        -webkit-box-reflect: below -40px linear-gradient(transparent, #000);
+    }
+
+    // meio
+    .troca {
+        position: relative;
+        height: 160px;
+        margin-top: 20px;
+
+        .meio {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .topicos {
+            text-transform: uppercase;
+        }
+
+        .coisa {
+            overflow: hidden;
+            height: 50px;
+
+            .palabras {
+                display: inline-block;
+                color: white;
+                background: red;
+                padding: 4px 12px;
+                border-radius: 2px;
+                margin-bottom: 45px;
+
+                &:nth-child(1) {
+                    background: #3498db;
+                    animation: rodopia 5s linear infinite;
+                }
+
+                &:nth-child(2) {
+                    background: #6126a5;
+                }
+
+                &:nth-child(3) {
+                    background: #0b6b23;
+                }
+            }
+
+            @keyframes rodopia {
+
+                0% {
+                    margin-top: -270px;
+                }
+
+                5% {
+                    margin-top: -180px;
+                }
+
+                33% {
+                    margin-top: -180px;
+                }
+
+                38% {
+                    margin-top: -90px;
+                }
+
+                66% {
+                    margin-top: -90px;
+                }
+
+                71% {
+                    margin-top: 0px;
+                }
+
+                99.99% {
+                    margin-top: 0px;
+                }
+
+                100% {
+                    margin-top: 0px;
+                }
+            }
+
+        }
     }
 }

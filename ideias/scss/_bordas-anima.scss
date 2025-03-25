@@ -3,10 +3,9 @@
     overflow: hidden;
 }
 
-
 // borda-grad, borda-grad2, borda-grad3, borda-led, borda-duo, borda-duo2, borda-pulse
 .bordas-anima-grid {
-    @include flex(60px, space-between);
+    @include flex(50px, space-between);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
     text-align: center;
@@ -19,6 +18,11 @@
 
     p {
         @include font(16, 500, );
+    }
+
+    .guarda-borda {
+        @include flex(20px, space-between);
+
     }
 
     //borda-grad
