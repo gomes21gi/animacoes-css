@@ -1,0 +1,112 @@
+.btn-clip {
+    padding: 40px 10px;
+}
+
+.btn-clip-grid {
+    @include flex(60px);
+
+    .modelo {
+        padding: 10px 30px;
+        background: #9e0727;
+    }
+
+    .numero1 {
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        height: 45px;
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include flex();
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+
+            &:nth-child(2) {
+                background: #fff;
+                color: #9e0727;
+                overflow: hidden;
+                z-index: 3;
+                transition: 1s;
+                clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%, 100% 50%);
+
+            }
+
+        }
+
+        &:hover span:nth-child(2) {
+            animation: flecha 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes flecha {
+            0% {
+                clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%, 100% 50%);
+            }
+
+            50% {
+                clip-path: polygon(60% 0, 100% 0%, 100% 100%, 60% 100%, 40% 53%);
+            }
+
+            100% {
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
+            }
+        }
+    }
+
+    .numero2 {
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        height: 45px;
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include flex();
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+
+            &:nth-child(2) {
+                background: #fff;
+                color: #9e0727;
+                overflow: hidden;
+                z-index: 3;
+                transition: 1s;
+                clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+
+            }
+
+        }
+
+        &:hover span:nth-child(2) {
+            animation: flecha 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes flecha {
+            0% {
+                clip-path: polygon(50% 25%, 75% 50%, 50% 75%, 25% 50%);
+            }
+
+            50% {
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            }
+
+            100% {
+                clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
+            }
+        }
+    }
+
+    // .numero2 {}
+}

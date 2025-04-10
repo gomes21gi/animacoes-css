@@ -51,57 +51,53 @@
 <body>
     <!-- header -->
     <header class="header" aria-label="header">
-        <div class="header-grid container" style="display: flex;justify-content: center;">
+        <div class="header-grid container">
+            <a href="index.html" class="voltando">< Voltar</a>
             <div class="logo"><a href="index.html"><img src="/img/logo.png" alt="esquilo"></a></div>
         </div>
     </header>
 
     <!-- main -->
-    <main class="main" aria-label="main">
+    <!-- <main class="main" aria-label="main">
         <div class="main-grid container">
-            <a href="animaImg.html" class="botoes">Anima Img</a>
-            <a href="animaText.html" class="botoes">Anima Text</a>
-            <a href="background.html" class="botoes">Background</a>
-            <a href="bordasAnimadas.html" class="botoes">Bordas</a>
-            <a href="button.html" class="botoes">Button</a>
-            <a href="card.html" class="botoes">Card</a>
-            <a href="calculator.html" class="botoes">Calculadora</a>
-            <a href="clipPath.html" class="botoes">Clip-Path</a>
-            <a href="dragdrop.html" class="botoes">Drag and Drop</a>
-            <a href="filter.html" class="botoes">Filter</a>
-            <a href="menus.html" class="botoes">Menus</a>
-            <a href="scroll.html" class="botoes">Scroll</a>
         </div>
-    </main>
+    </main> -->
 
-    <!-- box, c-loader -->
-    <!-- <section class="diferente" aria-label="diferente">
-        <div class="diferente-grid container">
-            <div class="box"></div>
-        
-            <div class="c-loader"></div>
-        </div>
-    </section> -->
-     
-    <!-- digitalmix -->
-    <!-- <section class="digitalmix">
-
-        <div class="digitalmix-grid container">
-
-            <div>
-                <p>Desenvolvido por:</p>
-                <a target="_blank" href="https://www.digitalmix.tech/"><img src="/img/digitalmix.svg"
-                        alt="digitalmix"></a>
+    <section class="guarda-dragdrop">
+        <div class="guarda-dragdrop-grid container">
+            <div class="kanban">
+                <div class="column">
+                    <div class="task" draggable="true">Tarefa 1</div>
+                    <div class="task" draggable="true">Tarefa 2</div>
+                </div>
+                <div class="column">
+                    <div class="task" draggable="true">Tarefa 3</div>
+                    <div class="task" draggable="true">Tarefa 4</div>
+                </div>
+                <div class="column">
+                    <div class="task" draggable="true">Tarefa 5</div>
+                    <div class="task" draggable="true">Tarefa 6</div>
+                </div>
             </div>
-            <p>Especialistas em criação de sites e tráfego pago, com muito ♡, ética e profissionalismo :)</p>
-
         </div>
+    </section>
 
-    </section> -->
+    <section class="guarda-anota">
+        <div class="guarda-anota-grid container">
+            <div class="anotacao">
+                <div class="addNote-content">
+                    <div class="icon-plus">+</div>
+                    <span>Adicionar</span>
+                </div>
+                <div class="notas"></div>
+            </div>
+        </div>
+    </section>
 
     <script src="/js/view.js"></script>
-    <script src="/js/banner.js"></script>
+    <script src="/js/dragdrop.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/anota.js"></script>
     <script src="/js/menu-mobile.js"></script>
 </body>
 

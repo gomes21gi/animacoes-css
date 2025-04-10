@@ -1,0 +1,37 @@
+.guarda-dragdrop {
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+.guarda-dragdrop-grid {
+    @include flex();
+
+}
+
+.kanban {
+    @include flex(10px);
+    height: 300px;
+    padding: 10px;
+
+    .column {
+        @include flex(10px);
+        justify-content: start;
+        flex-direction: column;
+        padding: 30px 10px;
+        background: cadetblue;
+        min-width: 200px;
+        border-radius: 5px;
+        min-height: 300px;
+
+        .task {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 150px;
+        }
+
+        .dragging {
+            opacity: .5;
+        }
+    }
+}

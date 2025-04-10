@@ -1,0 +1,123 @@
+.borda-onda {
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+.borda-onda-grid {
+    @include flex(30px);
+
+    .onda1 {
+        position: relative;
+        width: 360px;
+        height: 360px;
+        background: rgb(77, 160, 255);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 30px;
+            background: #0002;
+            border-radius: 10px;
+        }
+
+        span {
+            position: absolute;
+            inset: 0;
+            rotate: calc(var(--i) * 90deg);
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 15px;
+                background-image: radial-gradient(circle at 10px 15px, #badeeb 12px, transparent 13px);
+                background-repeat: repeat;
+                background-size: 40px 20px;
+                animation: mexe .5s linear infinite;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 10px;
+                background-image: radial-gradient(circle at 10px -5px, transparent 12px, #badeeb 13px);
+                background-repeat: repeat;
+                background-size: 20px 20px;
+                animation: mexe .5s linear infinite;
+            }
+
+            @keyframes mexe {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 40px 0;
+                }
+
+            }
+        }
+    }
+
+    .onda2 {
+        position: relative;
+        width: 360px;
+        height: 360px;
+        background: rgb(112, 9, 9);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 30px;
+            background: #0002;
+            border-radius: 10px;
+        }
+
+        &:hover {
+            span {
+                position: absolute;
+                inset: 0;
+                rotate: calc(var(--i) * 90deg);
+
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 15px;
+                    background-image: radial-gradient(circle at 10px 15px, #badeeb 12px, transparent 13px);
+                    background-repeat: repeat;
+                    background-size: 20px 20px;
+                    animation: mexe .5s linear infinite;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 10px;
+                    background-image: radial-gradient(circle at 10px -5px, transparent 12px, #badeeb 13px);
+                    background-repeat: repeat;
+                    background-size: 10px 10px;
+                    animation: mexe .5s linear infinite;
+                }
+            }
+
+            @keyframes mexe {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 40px 0;
+                }
+
+            }
+        }
+    }
+}

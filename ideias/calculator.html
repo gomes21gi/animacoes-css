@@ -45,13 +45,15 @@
 
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <!-- <span class="view"></span> -->
 <body>
     <!-- header -->
     <header class="header" aria-label="header">
-        <div class="header-grid container" style="display: flex;justify-content: center;">
+        <div class="header-grid container">
+            <a href="index.html" class="voltando">< Voltar</a>
             <div class="logo"><a href="index.html"><img src="/img/logo.png" alt="esquilo"></a></div>
         </div>
     </header>
@@ -59,48 +61,61 @@
     <!-- main -->
     <main class="main" aria-label="main">
         <div class="main-grid container">
-            <a href="animaImg.html" class="botoes">Anima Img</a>
-            <a href="animaText.html" class="botoes">Anima Text</a>
-            <a href="background.html" class="botoes">Background</a>
-            <a href="bordasAnimadas.html" class="botoes">Bordas</a>
-            <a href="button.html" class="botoes">Button</a>
-            <a href="card.html" class="botoes">Card</a>
-            <a href="calculator.html" class="botoes">Calculadora</a>
-            <a href="clipPath.html" class="botoes">Clip-Path</a>
-            <a href="dragdrop.html" class="botoes">Drag and Drop</a>
-            <a href="filter.html" class="botoes">Filter</a>
-            <a href="menus.html" class="botoes">Menus</a>
-            <a href="scroll.html" class="botoes">Scroll</a>
         </div>
     </main>
 
-    <!-- box, c-loader -->
-    <!-- <section class="diferente" aria-label="diferente">
-        <div class="diferente-grid container">
-            <div class="box"></div>
+    <section class="guarda-calculadora">
+        <div class="guarda-calculadora-grid container">
+            <div class="calculator">
+                <div class="result">0</div>
+                <div class="buttons">
+                    <button class="bg-gray">C</button>
+                    <button class="bg-gray">±</button>
+                    <button class="bg-gray">%</button>
+                    <button class="bg-orange">÷</button>
         
-            <div class="c-loader"></div>
-        </div>
-    </section> -->
-     
-    <!-- digitalmix -->
-    <!-- <section class="digitalmix">
-
-        <div class="digitalmix-grid container">
-
-            <div>
-                <p>Desenvolvido por:</p>
-                <a target="_blank" href="https://www.digitalmix.tech/"><img src="/img/digitalmix.svg"
-                        alt="digitalmix"></a>
+                    <button class="bg-light-gray">7</button>
+                    <button class="bg-light-gray">8</button>
+                    <button class="bg-light-gray">9</button>
+                    <button class="bg-orange">×</button>
+        
+                    <button class="bg-light-gray">4</button>
+                    <button class="bg-light-gray">5</button>
+                    <button class="bg-light-gray">6</button>
+                    <button class="bg-orange">-</button>
+        
+                    <button class="bg-light-gray">1</button>
+                    <button class="bg-light-gray">2</button>
+                    <button class="bg-light-gray">3</button>
+                    <button class="bg-orange">+</button>
+        
+                    <button class="bg-light-gray button-zero">0</button>
+                    <button class="bg-light-gray">,</button>
+                    <button class="bg-orange">=</button>
+        
+                </div>
             </div>
-            <p>Especialistas em criação de sites e tráfego pago, com muito ♡, ética e profissionalismo :)</p>
-
         </div>
+    </section>
 
-    </section> -->
+    <section class="guarda-select">
+        <div class="guarda-select-grid container">
+            <div class="select">
+                <div class="btn-select">
+                  <span>Selecione um país</span>
+                  <i id="icon-select" class='bx bx-chevron-down' ></i>
+                </div>
+                <div class="select-content">
+                  <input type="text">
+                  <ul class="options"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="/js/view.js"></script>
-    <script src="/js/banner.js"></script>
+    <script src="/js/calculadora.js"></script>
+    <script src="/js/select.js" type="module"></script>
     <script src="/js/index.js"></script>
     <script src="/js/menu-mobile.js"></script>
 </body>

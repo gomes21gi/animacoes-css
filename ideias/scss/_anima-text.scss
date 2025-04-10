@@ -10,6 +10,8 @@
     gap: 50px;
     @include font(25, 800);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Cor verde vibrante */
+    background: oklch(from #23d5ab calc(1-0.015) c h);
 
     // some
     .some {

@@ -423,7 +423,7 @@ body {
 
         .item20 {
             cursor: pointer;
-            box-shadow: 0 0 0 0 #05cfdd inset, 0 -20px 25PX -10PX #02939d inset;
+            box-shadow: 0 0 0 0 #05cfdd inset, 0 -20px 25PX -10PX #05cfdd inset;
             position: relative;
             overflow: hidden;
 
@@ -433,6 +433,29 @@ body {
 
             }
         }
+
+        .item21 {
+            background: linear-gradient(90deg, #05cfdd, #02939d);
+            box-shadow: 0 0 0 0 #a843ec inset;
+            transition: .6s;
+
+            &:hover {
+                box-shadow: 320px 0 0 0 #a843ec inset;
+            }
+        }
+
+        .item22 {
+            cursor: pointer;
+            background: #02939d;
+            box-shadow: 0 3px 5px 1px #1e1e1e56, inset 0 -0.1em 0.1em #1e1e1e3b, 240px -85px 100px -100px #05cfdd inset;
+
+            &:hover {
+                background: #a843ec;
+                box-shadow: 0 3px 5px 1px #1e1e1e56, inset 0 -0.1em 0.1em #1e1e1e3b, 240px -85px 100px -100px #ad9ce5 inset;
+
+            }
+        }
+
 
         @media only screen and(max-width: 465px) {
             grid-template-columns: 1fr 1fr;
